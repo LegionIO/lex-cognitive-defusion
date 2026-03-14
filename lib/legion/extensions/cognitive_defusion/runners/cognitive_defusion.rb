@@ -49,7 +49,7 @@ module Legion
           end
 
           def fuse_thought(thought_id:, engine: nil, **)
-            eng    = engine || defusion_engine
+            eng = engine || defusion_engine
             thought = eng.thoughts[thought_id]
             return { success: false, error: :thought_not_found } unless thought
 

@@ -22,19 +22,19 @@ module Legion
           }.freeze
 
           FUSION_LABELS = {
-            (0.8..)      => :enmeshed,
-            (0.6...0.8)  => :fused,
-            (0.4...0.6)  => :partially_fused,
-            (0.2...0.4)  => :defused,
-            (..0.2)      => :fully_defused
+            (0.8..)     => :enmeshed,
+            (0.6...0.8) => :fused,
+            (0.4...0.6) => :partially_fused,
+            (0.2...0.4) => :defused,
+            (..0.2)     => :fully_defused
           }.freeze
 
           BELIEF_LABELS = {
-            (0.8..)      => :entrenched,
-            (0.6...0.8)  => :strong,
-            (0.4...0.6)  => :moderate,
-            (0.2...0.4)  => :weak,
-            (..0.2)      => :negligible
+            (0.8..)     => :entrenched,
+            (0.6...0.8) => :strong,
+            (0.4...0.6) => :moderate,
+            (0.2...0.4) => :weak,
+            (..0.2)     => :negligible
           }.freeze
 
           FUSION_THRESHOLD  = 0.7

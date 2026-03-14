@@ -112,12 +112,12 @@ module Legion
             potency   = TECHNIQUE_POTENCY[technique]
 
             {
-              thought_id:        thought_id,
-              thought_type:      thought.thought_type,
-              technique:         technique,
-              potency:           potency,
-              current_fusion:    thought.fusion_level,
-              projected_fusion:  (thought.fusion_level - potency).clamp(0.0, 1.0).round(10)
+              thought_id:       thought_id,
+              thought_type:     thought.thought_type,
+              technique:        technique,
+              potency:          potency,
+              current_fusion:   thought.fusion_level,
+              projected_fusion: (thought.fusion_level - potency).clamp(0.0, 1.0).round(10)
             }
           end
 
@@ -138,14 +138,14 @@ module Legion
           def defusion_report
             all = @thoughts.values
             {
-              total_thoughts:       all.size,
-              enmeshed_count:       all.count(&:enmeshed?),
-              defused_count:        all.count(&:defused?),
-              ruminating_count:     all.count(&:ruminating?),
-              average_fusion:       average_fusion,
-              defusion_attempts:    @defusion_history.size,
+              total_thoughts:         all.size,
+              enmeshed_count:         all.count(&:enmeshed?),
+              defused_count:          all.count(&:defused?),
+              ruminating_count:       all.count(&:ruminating?),
+              average_fusion:         average_fusion,
+              defusion_attempts:      @defusion_history.size,
               defusion_effectiveness: defusion_effectiveness,
-              most_fused:           most_fused(limit: 3).map(&:to_h)
+              most_fused:             most_fused(limit: 3).map(&:to_h)
             }
           end
 

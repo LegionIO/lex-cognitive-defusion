@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.email         = ['matthewdiverson@gmail.com']
 
   spec.summary       = 'LEX Cognitive Defusion'
-  spec.description   = 'Cognitive defusion (ACT) for brain-modeled agentic AI — step back from thoughts and observe them as mental events rather than literal truths'
+  spec.description   = 'Cognitive defusion (ACT) for brain-modeled agentic AI — ' \
+                       'step back from thoughts and observe them as mental events rather than literal truths'
   spec.homepage      = 'https://github.com/LegionIO/lex-cognitive-defusion'
   spec.license       = 'MIT'
   spec.required_ruby_version = '>= 3.4'

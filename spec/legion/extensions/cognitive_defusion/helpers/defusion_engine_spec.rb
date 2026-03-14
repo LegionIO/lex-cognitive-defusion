@@ -69,8 +69,8 @@ RSpec.describe Legion::Extensions::CognitiveDefusion::Helpers::DefusionEngine do
 
     it 'applies all techniques and returns aggregated result' do
       result = engine.apply_all_techniques(thought_id: thought_id)
-      expect(result[:success]).to be true
       expect(result[:total_applied]).to eq(Legion::Extensions::CognitiveDefusion::Helpers::Constants::DEFUSION_TECHNIQUES.size)
+      expect(result[:final_fusion]).to be_a(Float)
     end
 
     it 'significantly reduces fusion' do
